@@ -1,0 +1,121 @@
+:root {
+    --lightBrowon:	rgb(158, 133, 135);
+    --darkGray: rgb(65, 72, 79);
+    --turquoise : rgb(34, 140, 147)  ;
+    --lightgreen : rgb(118, 127, 127);
+    --lightred: rgb(171, 151, 135);
+    --black: rgb(0, 0, 0);
+    --shament : rgb(184, 177, 172) ;
+    --MyOrang :rgb(210, 105, 30) ;
+    --Nav : #006666;
+    --salmon: rgb(245, 190, 165);
+}
+
+ /*/ fonts  /*/
+
+@font-face  {
+    font-family: HotalFont1;
+    src: url(BeauRivage-Regular.ttf);
+    }
+
+    @font-face  {
+        font-family: HotalFont2;
+        src: url(GentiumBasic-Italic.ttf);
+        }
+
+
+ @font-face  {
+        font-family: Font3;
+        src: url(Cinzel-Regular.ttf);}
+
+
+@font-face  {
+        font-family: Font3Bold;
+        src: url(Cinzel-Bold.ttf);
+        }
+
+
+body {
+  background-color:white;
+}
+
+
+ul.navbar-nav mr-auto mt-2 mt-lg-0 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e7e7e7;
+  background-color: #faf8f8;
+}
+
+
+li.nav-item {
+  float: left;
+}
+
+li a.av-link {
+  display: block;
+  color: #666;
+  text-align: center;
+  text-decoration: none;
+  font-family: Font3;
+  font-size:2px;
+}
+
+
+li a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+li a.active {
+  color: white;
+background-color: var(--salmon);
+}
+
+
+header {
+  padding:70px;
+  margin : 10px;;
+  border-radius : 7px;
+}
+
+.animaTEXT {
+  margin:0;
+  padding:0;
+  font-family : "Segoe UI Semibold";
+  font-weight : 300;
+  font-size : 50px;
+  position : relative;
+  color: var(--lightred);
+
+}
+
+#hello{
+      -webkit-animation :
+    hello 5s 1s ,
+    cominghello 1s;
+}
+
+/*Anim declarations*/
+@-webkit-keyframes cominghello {
+  0% { top: -100px; left : -50px; opacity : 0 }
+  100% { top: 0px; left : -50px; opacity: 1}
+}
+@-webkit-keyframes hello {
+  from { left:-50px; color: red; }
+  to { left: 900px; color : white; }
+}
+
+.close{
+  position:absolute;
+  width:30px;
+  height:30px;
+  opacity:0.5;
+  border-width:1px;
+  right:15px;
+  top:25px;
+  text-align:center;
+  font-size:1.6em;
+  cursor:pointer;
+}

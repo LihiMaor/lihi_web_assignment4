@@ -1,0 +1,101 @@
+  <script defer src="{{ url_for('static', filename='HotelJS.js') }}"></script>
+  <link  href= "{{ url_for('static', filename='ass3Style.css') }}" rel="stylesheet"/>
+
+<body class="Board">
+
+
+{% extends 'base.html' %}
+
+{% block title %}About me Page{% endblock %}
+
+      {% set Navlink1 = "/"  %}
+      {% set NavlinkName1 = 'assignment 2-Lola hotel'  %}
+
+      {% set Navlink2 = "/assignment3_1"    %}
+      {% set NavlinkName2 = 'assignment3_1'    %}
+
+      {% set Navlink3 = "/assignment3_2"    %}
+      {% set NavlinkName3 = 'assignment3_2'  %}
+
+      {% set Navlink4 = "/assignment4"  %}
+      {% set NavlinkName4 = 'assignment4'  %}
+
+      {% set navColor = '#faf8f8' %}
+
+
+ {% block header %}
+
+ {% endblock %}
+
+{% block PageContent %}
+
+    {% if user %}
+
+     <div class="information" id="About">
+     <h2><i ><img class="miniIMG" src="{{ url_for('static', filename='thumbtack.png') }}" alt=""></i>  A little about {{ user.first_name | title() | default('User', true)}} {{ user.last_name | title() | default('User', true)}}</h2>
+     {% for key, value in user.items() %}
+                 {% if key=="email" %}
+                        <p>{{ key}}: {{ value}}</p>
+                    {% else %}
+                        <p>{{ key |replace("_", " ") | title()}}: {{ value | title() }}</p>
+                {% endif %}
+    {% endfor %}
+    </div>
+
+     <div class="information" id="Hobbies">
+     <h2><i ><img class="miniIMG" src="{{ url_for('static', filename='thumbtack.png') }}" alt=""></i>  My Hobbies </h2>
+    {% if hobbies %}
+        <ul class="b">
+            {% for hobbie in hobbies | unique()|sort() %}
+                <li>{{ hobbie | title() }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+            <p id="NotHave"> {{ user.first_name | title() | default('User', true)}} {{ user.last_name | title() | default('User', true)}} have no hobbies </p>
+        {% endif %}
+<br><br><br><br><br>
+    </div>
+
+
+  <div class="information" id="FavMusic">
+
+     <h2><i ><img class="miniIMG"  src="{{ url_for('static', filename='thumbtack.png') }}" alt=""></i>   My Favorite Music </h2>
+     <table>
+     <thead><tr><th>Singer</th><th>Song Of him</th></tr></thead>
+                {% for i in range(Fav_music["singer"]|length) %}
+     <tr>
+     <td >{{Fav_music.singer[i]|upper}}</td>
+    {% if Fav_music.song[i] %}
+           <td ><p>{{Fav_music.song[i]}}</p></td>
+            {% else %}
+        <td ><p>All</p></td>
+      {% endif %}
+
+    </tr>
+
+{% endfor %}
+</table>
+   <br>
+    </div>
+
+
+ {% else %}
+     <h class="Errormassage">user not found</h>
+ {% endif %}
+
+
+{% endblock %}
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

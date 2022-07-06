@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script defer src="{{ url_for('static', filename='HotelJS.js') }}"></script>
+   <link  href= "{{ url_for('static', filename='CSShotal.css') }}" rel="stylesheet"/>
+
+
+
+
+</head>
+
+<body>
+   <nav>
+      <ul id="menue">
+        <li><a href={{ '/' }}>Home</a></li>
+        <li><a href={{ '/Contact' }}>Contact</a></li>
+         <li><a href={{ '/assignment3_1' }}>assignment3_1</a></li>
+        <li><a href={{ '/assignment3_2' }}>assignment3_2</a></li>
+      </ul>
+    </nav>
+
+
+<div id="header">
+    <h1 id="headerh1">LOLA HOTEL </h1>
+  </div>
+
+
+  <div id="center">
+
+    <span id="img1" class="hotelimg"> <img src="{{ url_for('static', filename='VIEW.jpg') }}" alt="">
+      <div class="TitleForimg">
+        <P> Parisian balcony view</P>
+      </div>
+    </span>
+    <span id="img2" class="hotelimg"><img src="{{ url_for('static', filename='POOL.jpg') }}" alt="">
+      <div class="TitleForimg">
+        <P> Roof Top Pool</P>
+      </div>
+    </span>
+    <span id="img3" class="hotelimg"><img   src="{{ url_for('static', filename='BATHROOM.jpg') }}" alt="">
+      <div class="TitleForimg">
+        <P> Luxurious bathrooms </P>
+      </div>
+    </span>
+    <span id="img4" class="hotelimg"><img   src="{{ url_for('static', filename='BAD5.jpg') }}"alt="">
+      <div class="TitleForimg">
+        <P>Presidential Suite</P>
+      </div>
+    </span>
+    <span id="img5" class="hotelimg"><img   src="{{ url_for('static', filename='DINNER.jpg') }}" alt="">
+      <div class="TitleForimg">
+        <P> Spectacular dining room</P>
+      </div>
+    </span>
+    <span id="img6" class="hotelimg"><img   src="{{ url_for('static', filename='BAD4.jpg') }}" alt="">
+      <div class="TitleForimg">
+        <P> Decorated rooms</P>
+      </div>
+    </span>
+
+    <div class="dropdown">
+      <button id="infobtn" class="dropbtn" onclick="ShowOn()">More Info</button>
+      <div id="myDropdown" class="dropdown-content">
+        <p> Adress : </p>
+        <p>Web Street 103 ,Paris , France </p>
+        <br>
+        <p>Email : </p>
+        <p> lihimao@post.bgu.ac.il</p>
+        <br>
+        <p>Tel :</p>
+        <p> +972-08-1000123 </p>
+      </div>
+
+    </div>
+    </span>
+
+
+  </div>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

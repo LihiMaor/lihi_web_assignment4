@@ -1,0 +1,82 @@
+  <link  href= "{{ url_for('assignment_4.static', filename='ass4_Style.css') }}" rel="stylesheet"/>
+  <link  href= "{{ url_for('static', filename='ass3Style.css') }}" rel="stylesheet"/>
+  <script defer src="{{ url_for('assignment_4.static', filename='ass4_JS.js') }}"></script>
+  <script defer src="{{ url_for('assignment_4.static', filename='fetch.js') }}"></script>
+
+<body class="shamenet">
+
+{% extends 'base.html' %}
+
+{% block title %}outer source Page{% endblock %}
+
+
+    {% set Navlink1 = "/"  %}
+      {% set NavlinkName1 = 'assignment 2-Lola hotel'  %}
+
+      {% set Navlink2 = "/assignment3_1"    %}
+      {% set NavlinkName2 = 'assignment3_1'    %}
+
+      {% set Navlink3 = "/assignment3_2"    %}
+      {% set NavlinkName3 = 'assignment3_2'  %}
+
+      {% set Navlink4 = "/assignment4"  %}
+      {% set NavlinkName4 = 'assignment4'  %}
+
+      {% set Navlink5 = "/assignment4/outer_source"  %}
+      {% set NavlinkName5 = 'outer source'  %}
+
+      {% set navColor = '#faf8f8' %}
+
+
+
+{% block PageContent %}
+
+
+
+  <div class="Container_forms" id="Container_forms2">
+
+
+   <div id="Frontend" class="formsDiv">
+       <div>
+           <h2>Frontend</h2>
+        <form id="frontedForm" class="search">
+        <input class="inputBox" type="number" name="user_id" placeholder="ID"  min="1" max="13" required>
+       </form>
+       <button class="btnForm" onclick="FrontedFunc()"><i class="fa fa-search"></i></button>
+     </div>
+
+      </div>
+       <div class="avatar" >  <main> </main></div>
+
+     <div id="Backend" class="formsDiv">
+       <div>
+           <h2>Backend</h2>
+            <form id="BackendForm" class="search" action="/fetch_Backend" >
+        <input class="inputBox" type="number" name="back_id" placeholder="ID" min="1" max="13" required>
+                <input class="btnForm" id="searchBtn" type="submit" value="Search">
+        </form>
+     </div>
+      </div>
+
+      <div class="avatar" >
+          {% if user_Email %}
+          <figure>
+        <img src="{{user_picture}}" alt="Profile Picture" width="100%"/>
+        <figcaption>
+            <p style=" font-size: 25px;  text-shadow: 2px 2px lightsalmon;   word-wrap: break-word;"> {{user_FirstName}} {{user_LastName}}</p>
+            <p > email:  {{user_Email}}  </p>
+            <a href="mailto:{{ user_Email }}">Send Email</a>
+        </figcaption>
+      </figure>
+
+             {% endif %}
+      </div>
+
+         </div>
+
+
+
+
+{% endblock %}
+
+</body>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+   <script defer src="{{ url_for('static', filename='HotelJS.js') }}"></script>
+   <link  href= "{{ url_for('static', filename='CSShotal.css') }}" rel="stylesheet"/>
+
+  </head>
+  <body>
+    <nav>
+      <ul id="menue">
+        <li><a href={{ '/' }}>Home</a></li>
+        <li><a href={{ '/Contact' }}>Contact</a></li>
+        <li><a href={{ '/assignment3_1' }}>assignment3_1</a></li>
+        <li><a href={{ '/assignment3_2' }}>assignment3_2</a></li>
+      </ul>
+    </nav>
+
+    <div id="hederDiv">
+      <h1 id="headerh1">LOLA HOTEL</h1>
+    </div>
+
+    <h2 id="headerh2">Contact US</h2>
+
+    <div class="Main">
+      <form id="create-account-form" >
+      
+        <!-- USERNAME -->
+        <div class="input-group">
+          <label for="username">Name</label>
+          <input type="text" id="username" placeholder="Name" name="username" />
+         
+        </div>
+        <!-- EMAIL -->
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Email" name="email" />
+       
+        </div>
+        <!-- Tel -->
+        <div class="input-group">
+          <label for="">Phone Number</label>
+          <input type="tel" id="tel" placeholder="tel" name="tel" />
+          </div>
+
+        <!--Chek in Date-->
+        <div class="input-group">
+          <label for="Chek in Date">Chek in Date</label>
+          <input type="date"  id="Chek in Date"   placeholder="Chek in Date"  name="Chek in Date" />
+         </div>
+
+        <!--Chek Out Date-->
+        <div class="input-group">
+          <label for="Chek Out Date">Chek in Date</label>
+          <input  type="date"  id="Chek Out Date"   placeholder="Chek Out Date"    name="Chek in Date"
+          />
+        </div>
+
+    <!--agree-->
+       <div class="input-group"> 
+        <input type="checkbox" id="agree" name="agree" >
+        <label for="agree"> I agree to get marketing mailing </label>
+        </div>
+             </form>   
+    </div>
+
+    <div class="MainDown">
+<button type="submit" id="btn1"  class="btn" onclick="typeWriter()">Submit</button>
+    </div>
+    <span id="demoSpan" > <p id="demo"> </p></span>
+    
+
+  </body>
+</html>

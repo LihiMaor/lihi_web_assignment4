@@ -1,0 +1,155 @@
+:root {
+    --lightBrowon:	rgb(158, 133, 135);
+    --darkGray: rgb(112, 106, 107);
+    --lightgreen : rgb(118, 127, 127);
+    --lightred: rgb(219, 112, 88);
+    --shament : rgb(184, 177, 172) ;
+    --salmon: rgb(245, 190, 165);
+    --Brawon: rgb(75, 70, 63);
+}
+
+
+
+.formsDiv {
+margin: 12px;
+width: 80%;
+padding: 50px;
+border: black 4px solid;
+font-weight:300;
+background-color: whitesmoke;
+margin: 30px;
+align-items: center;
+    border-radius: 10px;
+   overflow: auto;
+}
+
+.information{
+  background-image:url(../static/whitepaper.png) ;
+    margin: 10px auto;
+    width: 40%;
+    padding-top: 30px;
+    padding: 10px;
+    font-weight:bold;
+    letter-spacing: 1px;
+    border-style: outset;
+    overflow: auto;
+}
+
+.btnForm,.inputBox{
+    border-style: outset;
+    padding: 5px;
+    background-color:lightgray;
+    border-radius: 5px;
+    margin: 10px;
+    color: var(--Brawon);
+    text-align: center;
+}
+
+.btnForm,#Butten_Search,#Butten_register
+{
+    box-shadow: 2px 2px 2px var(--darkGray);
+    padding: 8px;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid black;
+    margin: 10px;
+    background-color:#AB9787FF;
+
+}
+
+.btnForm:hover {
+    transform: translateY(7px);
+    box-shadow: 10px 10px 30px grey;
+
+}
+
+
+
+
+.logOutbtn{
+    box-shadow: 2px 2px 2px black;
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid black;
+    margin: 10px;
+    background-color:var(--shament);
+    text-decoration: none;
+    display: inline-block;
+    line-height: 2;
+
+}
+
+
+
+body.Board {
+    background-image: url(../static/cork-board.png);
+}
+body.shamenet{
+    background-color: var(--shament);
+}
+
+
+#thumbtack,.miniIMG{
+   width: 1cm;
+   height: 1cm;
+   position: relative;
+}
+
+ul.b {
+  display: block;
+  width: 2px;
+  list-style-type: upper-roman;
+
+}
+
+.Errormassage {
+color: red;
+font-size: 20px;
+}
+
+
+
+table {
+    border: 1px solid black;
+  border-collapse: separate;
+  width: 100%;
+}
+
+th, td ,tr {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+th{
+    background-color: var(--shament);
+    color: white;
+    font-size: 14px;
+}
+
+tr:hover {background-color: lightgray;}
+
+
+.formtitle {
+  font-weight: bolder;
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+#Searchform {grid-area: item1;}
+#Registerform { grid-area: item2; }
+
+.Container_forms {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 20%;
+  padding-top: 20px;
+  ;
+
+}
+
+.underline{
+      font-weight: bolder;
+    text-decoration: underline;
+}

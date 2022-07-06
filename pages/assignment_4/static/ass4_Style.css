@@ -1,0 +1,65 @@
+
+.flashedMessages{
+font-family:"Calibri Light";
+font-size: 20px;
+}
+
+th, td ,tr ,table {
+  padding: 12px;
+  text-align: left;
+
+}
+
+
+
+#MassageDiv{
+  width:50%;
+  margin:20px auto;
+  padding:30px;
+  position:relative;
+  border-radius:3px;
+  box-shadow: 5px 10px #888888;
+font-size: 15px;
+    background-color: white;
+
+}
+
+
+
+#success{
+color: mediumseagreen;
+}
+
+
+#error {
+  color: red;
+}
+
+
+
+
+.avatar{
+  padding-left: 25%;
+      padding-right: 25%;
+
+}
+
+
+
+
+   figure {
+       width: 70%;
+        background-color: white;
+        box-shadow: 5px 5px 5px #4d4d4e;
+        letter-spacing: 1px;
+       align-items: flex-end;
+ border-radius: 5px;
+               }
+
+        figcaption {
+            overflow: auto;
+            width: 100%;
+            text-align: center;
+            padding: 10px 20px;
+        }
+

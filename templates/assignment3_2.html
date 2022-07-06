@@ -1,0 +1,91 @@
+  <script defer src="{{ url_for('static', filename='HotelJS.js') }}"></script>
+  <link  href= "{{ url_for('static', filename='ass3Style.css') }}" rel="stylesheet"/>
+
+<body class="shamenet">
+
+{% extends 'base.html' %}
+
+{% block title %}Log In Page{% endblock %}
+
+    {% set Navlink1 = "/"  %}
+      {% set NavlinkName1 = 'assignment 2-Lola hotel'  %}
+
+      {% set Navlink2 = "/assignment3_1"    %}
+      {% set NavlinkName2 = 'assignment3_1'    %}
+
+      {% set Navlink3 = "/assignment3_2"    %}
+      {% set NavlinkName3 = 'assignment3_2'  %}
+
+      {% set Navlink4 = "/assignment4"  %}
+      {% set NavlinkName4 = 'assignment4'  %}
+
+      {% set navColor = '#faf8f8' %}
+
+
+
+ {% block PageContent %}
+ {{ super() }}
+
+<div class="Container_forms" id="Container_forms1">
+
+     <div class="formsDiv" id="Searchform">
+     <h5 class="formtitle">User search</h5>
+
+               <form action="/assignment3_2" method="get">
+                 <input class="inputBox" type="text" id="user_Name" name="user_Name" placeholder="user Name">
+                 <button class="btnForm" id="Butten_Search" type="submit" ><i class="fa fa-search"></i></button>
+               </form>
+
+{% if user_Name %}
+    <h><h class="underline">Name:</h>{{user_Name}} </h> <br>
+    <h><h class="underline">Email:</h> {{user_Email}} </h>
+{% endif %}
+{% if users %}
+    <table>
+    <thead><tr><th>user Name</th><th>Email</th></tr></thead>
+        {% for user in users %}
+    <tr>
+   <td>{{users[user]["user_Name"]}}</td>
+   <td >{{users[user]["user_Email"]}}</td>
+     {% endfor %}
+    </tr>
+    </table>
+{% endif %}
+
+     {% if massageNotHave %}
+        <h class="Errormassage">{{massageNotHave}}</h>
+     {% endif %}
+
+
+    </div>
+
+
+{% if session['logedin'] %}
+{% else %}
+
+    <div class="formsDiv" id="Registerform">
+     <h5 class="formtitle">Registration</h5>
+
+  <form action="/assignment3_2" method="post">
+           <input class="inputBox" type="text" name="user_Name" placeholder="user Name 3-15 chars"  minlength="3" maxlength="15" required>
+           <input class="inputBox" type="text" name="user_Email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+           <input class="btnForm" id="Butten_register" type="submit" value="register">
+
+</form>
+
+
+      {% if massageHave%}
+        <h class="Errormassage">{{massageHave}}</h>
+     {% endif %}
+
+
+</div>
+ {% endif %}
+
+
+</div>
+
+ {% endblock %}
+
+
+</body>

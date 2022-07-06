@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+  <script defer src="{{ url_for('assignment_4.static', filename='fetch.js') }}"></script>
+
+</head>
+<body>
+
+
+ {% block NAVBAR %}
+     {% include('NavBar.html') %}
+ {% endblock %}
+
+ {% block header %}
+   {% include('header.html') %}
+ {% endblock %}
+
+
+
+ {% block PageContent %}
+  <header><p class="animaTEXT" id="hello" >hello</p></header>
+ {% endblock %}
+
+
+</body>
+</html>
